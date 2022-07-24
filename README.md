@@ -31,6 +31,7 @@ This paper makes the simple assumption that only bank fees and household income 
             Table A-1 Unbanked Households and Their Demographic Characteristics, p.48
             
  (b) underbanked rate:
+ 
    2019 data: GAO, Regulators Have Taken Actions to Increase Access, but Measurement of Actions’ Effectiveness Could Be Improved
              (https://www.gao.gov/assets/gao-22-104468.pdf) 
              Unbanked and Underbanked Households in the United States p.5
@@ -54,7 +55,7 @@ This paper makes the simple assumption that only bank fees and household income 
             (https://www.fdic.gov/analysis/household-survey/2009/2009appendix.pdf) 
             Table A-12 Underbanked Households and Their Demographic Characteristics, p.58   
             
- (c) rate of unbanked households that cannot afford a bank account for financial reasons:
+ (c) rate of unbanked households that cannot afford a bank account for financial reasons: In this analysis, households that answered "Bank Account Fees Are Too High," "Bank Account Fees Are Too Unpredictable," or "Don't Have Enough Money" are counted as households that cannot afford a bank account for financial reasons.
    
    2019 data: How America Banks: Household Use of Banking and Financial Services 2019 FDIC Survey Appendix Tables
             (https://www.fdic.gov/analysis/household-survey/2019appendix.pdf) 
@@ -70,9 +71,6 @@ This paper makes the simple assumption that only bank fees and household income 
             (https://www.fdic.gov/analysis/household-survey/2013/2013appendix.pdf) A-9 Main Reason Households Were Unbanked By Previous Banking Status, 2013, p.25        
    2011 data: 2011 FDIC National Survey of Unbanked and Underbanked Households 2011 Appendices A - G - PDF
             (https://www.fdic.gov/analysis/household-survey/2011/2011-unbankedreport-app-a-g.pdf) 
-            Table A-20 2011 Reasons Households are Unbanked by Previous Banking Status, p.69         
-            
-            
-Unbanked households do not have any checking or saving accounts with banks or credit unions. Underbanked households have accounts but regularly use alternative financial services such as payday lenders.  The FDIC survey asks unbanked households why they do not have bank accounts. In this analysis, households that answered "Bank Account Fees Are Too High," "Bank Account Fees Are Too Unpredictable," or "Don't Have Enough Money" are counted as households that cannot afford a bank account for financial reasons.
-(a) The unbanked rate and (b) the underbanked rate can be influenced not only by bank fees and household income but also by various factors such as geographic access to banks, availability of ID, and people's trust in banks. Therefore, it should be noted that changes in bank fees may not accurately account for the impact on the unbanked and underbanked rates. On the other hand, since the rate of households that cannot afford a bank account for financial reasons is unlikely to be affected by anything other than bank fees and annual household income, the impact of bank fees can be accounted for more accurately.
-
+            Table A-20 2011 Reasons Households are Unbanked by Previous Banking Status, p.69        
+          
+# Data＆Methodology
