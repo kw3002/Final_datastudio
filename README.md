@@ -75,6 +75,6 @@ This paper makes the simple assumption that only bank fees and household income 
           
 # Visualization
 
-Charts 1 through 4 were created using Tableau.
+Charts 1 through 4 were created using Tableau. Please refer to the tableau file in the repository for detailed instructions.
 
 # Statistical analysis
