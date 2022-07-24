@@ -73,4 +73,6 @@ This paper makes the simple assumption that only bank fees and household income 
             (https://www.fdic.gov/analysis/household-survey/2011/2011-unbankedreport-app-a-g.pdf) 
             Table A-20 2011 Reasons Households are Unbanked by Previous Banking Status, p.69        
           
-# Data＆Methodology
+# Visualization
+
+# Statistical analysis
