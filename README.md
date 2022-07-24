@@ -6,7 +6,7 @@ This paper makes the simple assumption that only bank fees and household income 
 
 (2) Household income data: This paper uses U.S. census data (https://www.census.gov/data/tables/2021/demo/income-poverty/p60-273.html) for household income data. According to the FDIC data (https://www.fdic.gov/analysis/household-survey/2019appendix.pdf “A.6 Interest in Having a Bank Account, Among Unbanked Households, by Previous Bank Account Ownership and Household Characteristics, 2019”, p.9) in 2019, of the 6.9 million unbanked households, 3.2 million (about 47%) have annual household incomes below $15,000, and 5.1 million (about 75%) have annual household incomes below $30,000. Given that unbanked households are more likely to be low-income households, I use the bottom 20th percentile of household income (approximately $25,000) for the analysis from “Table A-4a.Selected Measures of Household Income Dispersion: 1967 to 2020" (https://www2.census.gov/programs-surveys/demo/tables/p60/273/tableA4.xlsx). According to a footnote in Table A4, the income data are adjusted for inflation using the Consumer Price Index data.
 
-(3) Bank usage data: This analysis uses FDIC Survey on Household Use of Banking and Financial Services as a source for bank usage data. This survey began in 2009 and is conducted every two years. This analysis uses data from 2009 to 2019. Three types of bank usage data can be obtained: (a) the unbanked rate,  (b) the underbanked rate, and (c) the rate of unbanked households that cannot afford a bank account for financial reasons. 
+(3) Bank usage data: This analysis uses FDIC Survey on Household Use of Banking and Financial Services as a source for bank usage data. This survey began in 2009 and is conducted every two years. This analysis uses data from 2009 to 2019. Three types of bank usage data can be obtained: (a) the unbanked rate,  (b) the underbanked rate, and (c) the rate of unbanked households that cannot afford a bank account for financial reasons. The sources of the respective data are as follows.
 
 (a) unbanked rate:
 
@@ -31,6 +31,11 @@ This paper makes the simple assumption that only bank fees and household income 
             Table A-1 Unbanked Households and Their Demographic Characteristics, p.48
             
  (b) underbanked rate:
+   2019 data: GAO, Regulators Have Taken Actions to Increase Access, but Measurement of Actions’ Effectiveness Could Be Improved
+             (https://www.gao.gov/assets/gao-22-104468.pdf) 
+             Unbanked and Underbanked Households in the United States p.5
+             (NOTE) FDIC did not report on the number of underbanked households in 2019, GAO estimated the number by recreating the underbanked group in the 
+                    2019 data (using FDIC’s 2017 definition). 
    
    2017 data: 2017 FDIC National Survey of Unbanked and Underbanked Households Appendix Tables
             (https://www.fdic.gov/analysis/household-survey/2017/2017appendix.pdf) A.4 Underbanked Rates by Household Characteristics, 2013-2017, 2013-2017, p.7
