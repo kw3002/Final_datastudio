@@ -13,15 +13,27 @@ This paper makes the simple assumption that only bank fees and household income 
             (https://www.fdic.gov/analysis/household-survey/2019appendix.pdf) A.2 Unbanked Rates by Household Characteristics, 2015–2019, p.3
    2017 data: 2017 FDIC National Survey of Unbanked and Underbanked Households Appendix Tables
             (https://www.fdic.gov/analysis/household-survey/2017/2017appendix.pdf) A.3 Unbanked Rates by Household Characteristics, 2013-2017, p.5
-            
+   2015 data: 2015 FDIC National Survey of Unbanked and Underbanked Households Appendix Tables
+            (https://www.fdic.gov/analysis/household-survey/2015/2015appendix.pdf) AA.1 Banking Status by Household Characteristics, 2015, p.1
+   2013 data: 2013 FDIC National Survey of Unbanked and Underbanked Households Appendices
+            (https://www.fdic.gov/analysis/household-survey/2013/2013appendix.pdf) A-1a Banking Status By Household Characteristics, 2013, p.6         
             
  (b) underbanked rate:
    2017 data: 2017 FDIC National Survey of Unbanked and Underbanked Households Appendix Tables
-            (https://www.fdic.gov/analysis/household-survey/2017/2017appendix.pdf) A.4 Underbanked Rates by Household Characteristics, 2013-2017 , 2013-2017, p.7
-   
- 
+            (https://www.fdic.gov/analysis/household-survey/2017/2017appendix.pdf) A.4 Underbanked Rates by Household Characteristics, 2013-2017, 2013-2017, p.7
+   2015 data: 2015 FDIC National Survey of Unbanked and Underbanked Households Appendix Tables
+            (https://www.fdic.gov/analysis/household-survey/2015/2015appendix.pdf) AA.1 Banking Status by Household Characteristics, 2015, p.1     
+   2013 data: 2013 FDIC National Survey of Unbanked and Underbanked Households Appendices
+            (https://www.fdic.gov/analysis/household-survey/2013/2013appendix.pdf) A-1a Banking Status By Household Characteristics, 2013, p.6        
  (c) rate of unbanked households that cannot afford a bank account for financial reasons:
-    
+   2017 data: 2017 FDIC National Survey of Unbanked and Underbanked Households Appendix Tables
+            (https://www.fdic.gov/analysis/household-survey/2017/2017appendix.pdf) A.17 Main Reason Households Were Unbanked by Previous Banking Status, 
+             2017 , 2013-2017, p.30
+   2015 data: 2015 FDIC National Survey of Unbanked and Underbanked Households Appendix Tables
+            (https://www.fdic.gov/analysis/household-survey/2015/2015appendix.pdf) A.17 Main Reason Households Were Unbanked by Previous Banking Status, 2015, p.34        2013 data: 2013 FDIC National Survey of Unbanked and Underbanked Households Appendices
+            (https://www.fdic.gov/analysis/household-survey/2013/2013appendix.pdf) A-9 Main Reason Households Were Unbanked By Previous Banking Status, 2013, p.25         
+            
+            
 Unbanked households do not have any checking or saving accounts with banks or credit unions. Underbanked households have accounts but regularly use alternative financial services such as payday lenders.  The FDIC survey asks unbanked households why they do not have bank accounts. In this analysis, households that answered "Bank Account Fees Are Too High," "Bank Account Fees Are Too Unpredictable," or "Don't Have Enough Money" are counted as households that cannot afford a bank account for financial reasons.
 (a) The unbanked rate and (b) the underbanked rate can be influenced not only by bank fees and household income but also by various factors such as geographic access to banks, availability of ID, and people's trust in banks. Therefore, it should be noted that changes in bank fees may not accurately account for the impact on the unbanked and underbanked rates. On the other hand, since the rate of households that cannot afford a bank account for financial reasons is unlikely to be affected by anything other than bank fees and annual household income, the impact of bank fees can be accounted for more accurately.
 
