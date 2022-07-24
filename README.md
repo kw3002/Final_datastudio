@@ -77,4 +77,169 @@ This paper makes the simple assumption that only bank fees and household income 
 
 Charts 1 through 4 were created using Tableau. Please refer to the tableau file in the repository for detailed instructions.
 
-# Statistical analysis
+# Statistical analysis using R
+
+1. Clean data to be loaded into Tableau
+
+(1) Preparation for coding
+
+library(tidyverse)
+
+library(janitor)
+
+library(tseries)
+
+(2) Calculate annual bank fees
+
+(3) Read csv
+
+bankfees <- read_csv("tableau bank fee.csv")
+
+bankfees
+
+(4) Calculate annual overdraft fees and annual service fees
+
+bankfees_tableau <- bankfees %>%
+  clean_names() %>%
+  mutate(annual_service_fee = monthly_fee_for_interest_accounts*12) %>%
+  mutate(annual_overdraft_fee = overdraft_fee*9.6)
+
+head(bankfees_tableau, n = 25)
+
+(5) Export
+
+write_csv(bankfees_tableau, "bankfee_data.csv")
+
+2. Regresion Analysis
+
+(1) Read csv
+
+regression <- read_csv("regression.csv")
+
+
+(2) Regression on unbanked rate
+
+regression_clean_names <- clean_names(regression)
+
+regression1 <- regression %>%
+  clean_names() %>%
+  select(x1, bank_fees, x20th_percentile_limit, unbanked_rate, underbanked_rate) %>%
+  filter(bank_fees>0, x20th_percentile_limit>0, unbanked_rate>0, underbanked_rate>0)
+
+model1 <- lm(unbanked_rate~ bank_fees + x20th_percentile_limit, regression1)
+
+summary(model1)
+I got the below results:
+Call:
+lm(formula = unbanked_rate ~ bank_fees + x20th_percentile_limit, 
+    data = regression1)
+
+Residuals:
+         1          2          3          4          5          6 
+-5.668e-04  1.805e-03 -1.591e-03  4.048e-04 -9.951e-05  4.778e-05 
+
+Coefficients:
+                         Estimate Std. Error t value Pr(>|t|)    
+(Intercept)             2.345e-01  1.241e-02  18.906 0.000323 ***
+bank_fees              -1.094e-04  2.774e-05  -3.945 0.029048 *  
+x20th_percentile_limit -4.423e-06  3.770e-07 -11.734 0.001330 ** 
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 0.001447 on 3 degrees of freedom
+Multiple R-squared:  0.9879,	Adjusted R-squared:  0.9798 
+F-statistic: 122.3 on 2 and 3 DF,  p-value: 0.001333
+
+
+(3) Regression on underbanked rate
+
+model2 <- lm(underbanked_rate~ bank_fees + x20th_percentile_limit, regression1)
+
+summary(model2)
+
+I got the below results :
+Call:
+lm(formula = underbanked_rate ~ bank_fees + x20th_percentile_limit, 
+    data = regression1)
+
+Residuals:
+        1         2         3         4         5         6 
+-0.001395  0.004202 -0.002654  0.001500 -0.003175  0.001523 
+
+Coefficients:
+                         Estimate Std. Error t value Pr(>|t|)   
+(Intercept)             2.023e-01  3.180e-02   6.362  0.00786 **
+bank_fees               2.752e-04  7.110e-05   3.871  0.03050 * 
+x20th_percentile_limit -5.721e-06  9.663e-07  -5.921  0.00963 **
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 0.00371 on 3 degrees of freedom
+Multiple R-squared:  0.9248,	Adjusted R-squared:  0.8746 
+F-statistic: 18.43 on 2 and 3 DF,  p-value: 0.02064	
+
+regression2 regre<- regression %>%
+  clean_names() %>%
+  select(x1, bank_fees, x20th_percentile_limit, rate_of_respondents_who_do_not_have_a_bank_account_due_to_financial_reasons) %>%
+  filter(bank_fees>0, x20th_percentile_limit>0, rate_of_respondents_who_do_not_have_a_bank_account_due_to_financial_reasons>0)
+
+acf(regression2$rate_of_respondents_who_do_not_have_a_bank_account_due_to_financial_reasons, type = "correlation")
+
+
+(3) Regression on unbanked rate
+
+model3 <- lm(rate_of_respondents_who_do_not_have_a_bank_account_due_to_financial_reasons ~ bank_fees + x20th_percentile_limit, regression2)
+
+summary(model3)
+
+I got the below results:
+
+Call:
+lm(formula = rate_of_respondents_who_do_not_have_a_bank_account_due_to_financial_reasons ~ 
+    bank_fees + x20th_percentile_limit, data = regression2)
+
+Residuals:
+        1         2         3         4         5 
+-0.003927  0.009324 -0.006615 -0.002082  0.003299 
+
+Coefficients:
+                         Estimate Std. Error t value Pr(>|t|)   
+(Intercept)            -1.040e+00  1.674e-01  -6.213  0.02494 * 
+bank_fees               4.831e-03  4.374e-04  11.044  0.00810 **
+x20th_percentile_limit -3.529e-05  3.039e-06 -11.613  0.00733 **
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 0.008982 on 2 degrees of freedom
+Multiple R-squared:  0.9868,	Adjusted R-square
+
+
+(4) Check autocorrelation
+
+library(car)
+
+durbinWatsonTest(model1)
+
+I got the below results.
+
+lag Autocorrelation D-W Statistic p-value
+   1      -0.7291766      3.406879   0.268
+ Alternative hypothesis: rho != 0
+
+durbinWatsonTest(model2)
+
+I got the below results.
+
+lag Autocorrelation D-W Statistic p-value
+   1      -0.7407704      3.378269   0.302
+ Alternative hypothesis: rho != 0
+
+durbinWatsonTest(model3)	
+
+I got the below results.
+
+lag Autocorrelation D-W Statistic p-value
+   1      -0.5664521       2.96986    0.99
+ Alternative hypothesis: rho != 0
+
+
